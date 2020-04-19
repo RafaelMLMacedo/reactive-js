@@ -1,4 +1,4 @@
-import DummyClass from "../src/reactive-js"
+import DummyClass from "../src"
 
 /**
  * Dummy test
