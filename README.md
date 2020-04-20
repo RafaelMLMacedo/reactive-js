@@ -7,25 +7,10 @@
 [![Dev Dependencies](https://david-dm.org/alexjoverm/typescript-library-starter/dev-status.svg)](https://david-dm.org/alexjoverm/typescript-library-starter?type=dev)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/AJoverMorales)
 
-A starter project that makes creating a TypeScript library extremely easy.
-
-![](https://i.imgur.com/opUmHp0.png)
-
-### Usage
-
-```bash
-git clone https://github.com/alexjoverm/typescript-library-starter.git YOURFOLDERNAME
-cd YOURFOLDERNAME
-
-# Run npm install and write your library name when asked. That's all!
-npm install
-```
-
 **Start coding!** `package.json` and entry files are already set up for you, so don't worry about linking to your main file, typings, etc. Just keep those files with the same name.
 
 ### Features
 
- - Zero-setup. After running `npm install` things will setup for you :wink:
  - **[RollupJS](https://rollupjs.org/)** for multiple optimized bundles following the [standard convention](http://2ality.com/2017/04/setting-up-multi-platform-packages.html) and [Tree-shaking](https://alexjoverm.github.io/2017/03/06/Tree-shaking-with-Webpack-2-TypeScript-and-Babel/)
  - Tests, coverage and interactive watch mode using **[Jest](http://facebook.github.io/jest/)**
  - **[Prettier](https://github.com/prettier/prettier)** and **[TSLint](https://palantir.github.io/tslint/)** for code formatting and consistency
