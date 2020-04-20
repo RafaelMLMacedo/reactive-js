@@ -25,8 +25,6 @@ const isObservableType = /*#__PURE__*/ makeMap('Object,Array,Map,Set,WeakMap,Wea
 
 const canObserve = (value: any): boolean => {
   return (
-    !value._isVue &&
-    !value._isVNode &&
     isObservableType(toRawType(value)) &&
     !nonReactiveValues.has(value)
   )
