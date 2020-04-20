@@ -3,8 +3,8 @@
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Coverage Status](https://coveralls.io/repos/github/RafaelMLMacedo/reactive-js/badge.svg?branch=master)](https://coveralls.io/github/RafaelMLMacedo/reactive-js?branch=master)
 [![Greenkeeper badge](https://badges.greenkeeper.io/alexjoverm/typescript-library-starter.svg)](https://greenkeeper.io/)
-[![Travis](https://img.shields.io/travis/alexjoverm/typescript-library-starter.svg)](https://travis-ci.org/alexjoverm/typescript-library-starter)
-[![Dev Dependencies](https://david-dm.org/alexjoverm/typescript-library-starter/dev-status.svg)](https://david-dm.org/alexjoverm/typescript-library-starter?type=dev)
+[![Travis](https://travis-ci.com/RafaelMLMacedo/reactive-js.svg)](https://travis-ci.com/RafaelMLMacedo/reactive-js.svg)
+[![Dev Dependencies Status](https://david-dm.org/RafaelMLMacedo/reactive-js/dev-status.svg)](https://david-dm.org/RafaelMLMacedo/reactive-js?type=dev)
 [![Donate](https://img.shields.io/badge/donate-paypal-blue.svg)](https://paypal.me/AJoverMorales)
 
 **Start coding!** `package.json` and entry files are already set up for you, so don't worry about linking to your main file, typings, etc. Just keep those files with the same name.
