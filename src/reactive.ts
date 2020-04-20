@@ -1,13 +1,12 @@
-import { isObject, toRawType } from './shared/index'
+import { isObject, toRawType, makeMap } from './shared'
 import {
   mutableHandlers,
   readonlyHandlers,
   shallowReadonlyHandlers,
-  shallowReactiveHandlers
+  shallowReactiveHandlers,
 } from './baseHandlers'
 import { mutableCollectionHandlers, readonlyCollectionHandlers } from './collectionHandlers'
 import { UnwrapRef, Ref } from './ref'
-import { makeMap } from './shared/index'
 
 // WeakMaps that store {raw <-> observed} pairs.
 const rawToReactive = new WeakMap<any, any>()
@@ -24,10 +23,7 @@ const collectionTypes = new Set<Function>([Set, Map, WeakMap, WeakSet])
 const isObservableType = /*#__PURE__*/ makeMap('Object,Array,Map,Set,WeakMap,WeakSet')
 
 const canObserve = (value: any): boolean => {
-  return (
-    isObservableType(toRawType(value)) &&
-    !nonReactiveValues.has(value)
-  )
+  return isObservableType(toRawType(value)) && !nonReactiveValues.has(value)
 }
 
 // only unwrap nested ref

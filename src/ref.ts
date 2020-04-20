@@ -1,4 +1,4 @@
-import { isObject } from './shared/index'
+import { isObject } from './shared'
 import { track, trigger } from './effect'
 import { isReactive, reactive } from './reactive'
 
@@ -30,7 +30,6 @@ export function isRef(r: any): r is Ref {
 }
 
 export function ref<T extends Ref>(value: T): T
-export function ref<T>(value: T): Ref<T>
 export function ref<T = any>(): Ref<T>
 export function ref(value?: unknown) {
   if (isRef(value)) {
