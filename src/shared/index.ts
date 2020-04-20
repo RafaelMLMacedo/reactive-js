@@ -25,7 +25,6 @@ function cacheStringFunction<T extends (str: string) => string>(fn: T): T {
 
 export const extend = <T extends object, U extends object>(a: T, b: U): T & U => {
   if (isArray(a) || isArray(b)) throw new Error(`'a' and 'b' must be of type Object. Array given.`)
-
   for (const key in b) {
     ;(a as any)[key] = b[key]
   }
@@ -71,5 +70,7 @@ export function makeMap(str: string, expectsLowerCase?: boolean): (key: string) 
   for (let i = 0; i < list.length; i++) {
     map[list[i]] = true
   }
-  return expectsLowerCase ? (val) => !!map[val.toLowerCase()] : (val) => !!map[val]
+  return expectsLowerCase
+    ? (value: string) => map[value.toLowerCase()]
+    : (value: string) => map[value]
 }

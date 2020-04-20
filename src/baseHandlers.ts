@@ -85,7 +85,6 @@ function createSetter(isReadonly = false, shallow = false) {
     const result = Reflect.set(target, key, value, receiver)
     // don't trigger if target is something up in the prototype chain of original
     if (target === toRaw(receiver)) {
-      /* istanbul ignore else */
       const extraInfo = { oldValue, newValue: value }
       if (!hadKey) {
         trigger(target, TriggerOpTypes.ADD, key, extraInfo)

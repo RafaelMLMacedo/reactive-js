@@ -1,5 +1,5 @@
+import { isFunction } from './shared'
 import { Ref, UnwrapRef } from './ref'
-import { isFunction } from './shared/index'
 import { effect, ReactiveEffect, activeEffect } from './effect'
 
 export interface ComputedRef<T = any> extends WritableComputedRef<T> {
@@ -41,9 +41,7 @@ export function computed<T>(getterOrOptions: ComputedGetter<T> | WritableCompute
     lazy: true,
     // mark effect as computed so that it gets priority during trigger
     computed: true,
-    scheduler: () => {
-      dirty = true
-    }
+    scheduler: () => { dirty = true }
   })
   return {
     _isRef: true,
